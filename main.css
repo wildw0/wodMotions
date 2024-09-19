@@ -1,0 +1,446 @@
+/* ========== Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== Global Variables ========== */
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --White: #fff;
+  --OffWhite: #fcfcfc;
+  --Black: #000;
+  --DarkBlue: #02111b;
+  --Grey: grey;
+  --LightGrey: #e3e3e3;
+  --Cian: #60dbc1;
+  --Green: #b0f500;
+
+  --border-radius: 10px;
+  --transition-speed: 0.3s;
+  --spacing-small: 8px;
+  --spacing-large: 16px;
+}
+
+/* ========== Body and Typography ========== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--White);
+  color: var(--DarkBlue);
+  font-family: var(--ff-primary);
+  font-size: calc(1rem + 0.5vw); /* Responsive font size */
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover; /* Responsive images */
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+  color: var(--DarkBlue);
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--DarkBlue);
+}
+
+/* ========== Navigation ========== */
+#nav {
+  img {
+    height: 50%;
+    width: 50%;
+  }
+  .green {
+    color: #b0f500 !important;
+  }
+}
+
+.navbar {
+  background-color: var(--Black);
+  display: flex;
+  flex-direction: row;
+}
+
+/* ========== Global Buttons ========== */
+.button-container button {
+  padding: var(--spacing-small) var(--spacing-large);
+  font-size: 18px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
+}
+
+.btn_gotosignup {
+  background-color: var(--Cian);
+  color: var(--Black);
+  border: none;
+  margin-right: 2rem;
+}
+.btn_learnmore {
+  background-color: transparent;
+  color: var(--White);
+  border: 2px solid --Cian;
+}
+.landing .button-container button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+.landing .button-container button:focus {
+  outline: 0;
+}
+
+/* ========== Hero Section ========== */
+.landing {
+  position: relative;
+  background-image: url(https://via.placeholder.com/200x100);
+  background-position: 5% 20%;
+  background-size: cover;
+}
+.row {
+  max-width: 100%;
+}
+.hero-sct h2 {
+  margin: 40px;
+  color: var(--White);
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+  text-align: left;
+}
+.btn_gotosignup,
+.btn_learnmore {
+  margin: 0px 0px 40px 40px;
+}
+
+/* ========== Not Just a Tracker Section ========== */
+.sct-notjustatracker {
+  padding: 15px 20px 70px;
+  max-width: 1200px; /* Limit content width */
+  margin: 0 auto;
+  text-align: center;
+  h1 {
+    font-size: calc(3rem + 0.5vw);
+  }
+}
+
+.sct-notjustatracker p {
+  font-size: 1.5rem; /* Adjusted text scale */
+}
+
+/* ========== Cards ========== */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  padding: 30px 10px 20px;
+  background-color: var(--Grey);
+  color: var(--OffWhite);
+}
+
+.card h2 {
+  color: var(--LightGrey);
+  line-height: 1.3;
+}
+
+.card p {
+  color: var(--White);
+  margin-top: 28px;
+  font-size: 18px;
+}
+
+/* ========== Focus on the Workout Section ========== */
+.sct-focusontheworkout {
+  display: flex;
+  background-color: var(--DarkBlue);
+}
+
+.sct-focusontheworkout p,
+.sct-focusontheworkout h1 {
+  font-size: 24px;
+  color: var(--OffWhite);
+  padding: 10px;
+  margin: 8px 0;
+}
+.sct-focusontheworkout h1 {
+  font-size: calc(3rem + 0.5vw);
+}
+
+.sct-focusontheworkout h1::after {
+  background-color: var(--OffWhite);
+}
+
+.image-container {
+  flex: 0 0 40%;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ========== Pacer Feature Section ========== */
+.sct-pacerfeature {
+  display: flex;
+  align-items: center;
+  padding: 0 0 30px 0;
+  background-color: var(--Grey);
+  color: var(--OffWhite);
+}
+
+.sct-pacerfeature h1 {
+  text-align: left;
+  margin-top: -20px;
+  margin-left: 30px;
+  margin-bottom: 7px;
+}
+
+/* Adds a line below h1 for visual emphasis */
+.sct-pacerfeature h1::after {
+  content: ""; /* Ensures the pseudo-element displays */
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--OffWhite);
+  margin-top: 5px;
+}
+
+.sct-pacerfeature h3 {
+  font-family: Inter-Italic, sans-serif;
+  background-color: var(--White);
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--OffWhite);
+  margin-left: 30px;
+}
+
+.sct-pacerfeature p {
+  font-size: 1.5rem;
+  text-align: left;
+  color: var(--OffWhite);
+  margin-left: 30px;
+}
+
+/* Image container with responsive behavior */
+.image-container-2 {
+  flex: 0 0 40%;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container-2 img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Content container for pacer feature text */
+.content-container-2 {
+  flex: 1;
+  text-align: left;
+  margin: 40px;
+}
+
+/* ========== Feature Section ========== */
+.feature {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.feature h4 {
+  font-size: 1.5rem;
+  text-align: left;
+  color: var(--White);
+}
+
+.feature p {
+  font-size: 20px;
+  text-align: left;
+  color: var(--OffWhite);
+}
+
+/* Image within the feature block */
+.feature-image {
+  flex: 0 0 10%;
+  height: 40%;
+  width: auto;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+/* ========== Team Section ========== */
+.teammembers {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.teammember {
+  width: calc(30%);
+}
+
+.teammember__img {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+}
+
+/* ========== Signup Section ========== */
+.form-row {
+  max-width: 100%;
+}
+.signup {
+  background-image: url(../img/luis-vidal-qivXmsOmEno-unsplash.png);
+  background-color: var(--Grey);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: var(--OffWhite);
+}
+
+.signup h2 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.signup input {
+  margin-top: 10px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 18px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.btn_signup {
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  border: 3px solid var(--Black);
+  border-radius: 50px;
+  background-color: var(--Grey);
+  color: var(--White);
+  font-size: 1.2rem;
+  transition: all var(--transition-speed);
+}
+
+/* ========== Footer ========== */
+.footer {
+  background: var(--DarkBlue);
+  color: var(--OffWhite);
+  text-align: center;
+  padding: 30px;
+}
+
+.footer__link {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* ========== Media Queries ========== */
+@media (min-width: 800px) {
+  :root {
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .image-container,
+  .image-container-2 {
+    flex: 0 0 100%;
+    min-height: 300px;
+  }
+  .sct-focusontheworkout,
+  .sct-pacerfeature {
+    flex-direction: column;
+  }
+  .sct-focusontheworkout h1,
+  .sct-focusontheworkout p,
+  .sct-pacerfeature h1,
+  .sct-pacerfeature h4,
+  .sct-pacerfeature p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .feature {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (min-width: 800px) {
+  .teammembers {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .teammember {
+    width: calc(30%);
+  }
+}

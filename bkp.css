@@ -1,0 +1,492 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --White: #fff;
+  --OffWhite: #fcfcfc;
+  --Black: #000;
+  --Dark: #02111b;
+  --Grey: grey;
+  --LightGrey: #e3e3e3;
+  --Cian: #60dbc1;
+  --Green: #b0f500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--White);
+  color: var(--Dark);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+section {
+  padding: 3em 1em;
+}
+:focus {
+  outline: 3px solid var(--White);
+  outline-offset: 3px;
+}
+h1 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+}
+h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--Dark);
+}
+.sct-title {
+  font-size: 3.5rem;
+}
+.navbar {
+  background-color: var(--Black);
+  display: flex;
+  flex-direction: row;
+}
+#home-logo {
+  height: 50%;
+  width: 50%;
+}
+.green {
+  color: #b0f500 !important;
+}
+.landing {
+  position: relative;
+  background-image: url(../img/hero_image.png);
+  background-position: 5% 20%;
+  background-size: cover;
+}
+.hero-sct {
+  margin-left: 20px;
+}
+.hero-sct h2 {
+  color: var(--White);
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+  box-sizing: border-box;
+}
+.button-container button {
+  font-size: 18px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+.btn_gotosignup {
+  background-color: var(--Cian);
+  color: var(--Black);
+  border: none;
+  margin-right: 2rem;
+}
+.btn_learnmore {
+  background-color: transparent;
+  color: var(--White);
+  border: 2px solid --Cian;
+}
+.landing .button-container button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+.landing .button-container button:focus {
+  outline: 0;
+}
+.sct-notjustatracker {
+  padding: 15px 20px 70px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.sct-notjustatracker h1 {
+  text-align: center;
+}
+.sct-notjustatracker p {
+  font-size: 24px;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  width: 380px;
+  height: 467px;
+  padding: 30px 10px 20px;
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: var(--Grey);
+  color: var(--OffWhite);
+}
+.card h2 {
+  color: var(--LightGrey);
+  font-size: 38px;
+  text-align: center;
+  height: 168px;
+  margin: 10px;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+.card p {
+  color: var(--White);
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+  margin-top: 20px;
+}
+.sct-focusontheworkout {
+  display: flex;
+  background-color: var(--Dark);
+}
+.sct-focusontheworkout p {
+  font-size: 1.5rem;
+  text-align: left;
+  color: var(--OffWhite);
+  padding-left: 10px;
+  padding-right: 30px;
+}
+.sct-focusontheworkout h1 {
+  padding-top: 10px;
+  text-align: left;
+  color: var(--OffWhite);
+}
+.sct-focusontheworkout h1::after {
+  background-color: var(--OffWhite);
+}
+.image-container {
+  flex: 0 0 40%;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.content-container {
+  flex: 1;
+  text-align: center;
+  margin: 20px;
+}
+.sct-pacerfeature {
+  display: flex;
+  align-items: center;
+  padding: 0 0 30px 0;
+  background-color: var(--Grey);
+  color: var(--OffWhite);
+}
+.sct-pacerfeature h1 {
+  text-align: left;
+  margin-top: -20px;
+  margin-left: 30px;
+  margin-bottom: 7px;
+}
+.sct-pacerfeature h1::after {
+  bottom: -5px;
+  background-color: var(--OffWhite);
+}
+.sct-pacerfeature h3 {
+  font-family: Inter-Italic, sans-serif;
+  background-color: var(--White);
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--OffWhite);
+  margin-left: 30px;
+}
+.sct-pacerfeature p {
+  font-size: 1.5rem;
+  text-align: left;
+  color: var(--OffWhite);
+  margin-left: 30px;
+}
+.image-container-2 {
+  flex: 0 0 40%;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.image-container-2 img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+.content-container-2 {
+  flex: 1;
+  text-align: left;
+  margin: 40px;
+}
+.feature {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 10;
+}
+.feature h4 {
+  font-size: 1.5rem;
+  text-align: left;
+  color: var(--White);
+}
+.feature p {
+  font-size: 20px;
+  text-align: left;
+  color: var(--OffWhite);
+}
+.feature-image {
+  flex: 0 0 10%;
+  height: 40%;
+  width: auto;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.sct-ourteam {
+  background-color: var(--OffWhite);
+  color: var(--Dark);
+  text-align: center;
+}
+.sct-ourteam h1 {
+  text-align: center;
+}
+.sct-ourteam h3 {
+  text-align: center;
+  flex-wrap: wrap;
+  line-height: 26px;
+}
+.sct-ourteam p {
+  padding-top: 0;
+  display: inline;
+  text-align: center;
+}
+.sct__title--team {
+  color: var(--clr-accent);
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+}
+.sct__title--team::after {
+  content: "";
+  display: block;
+  width: 4em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: currentColor;
+  opacity: 0.25;
+}
+.teammembers {
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.teammember {
+  max-width: 600px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.teammember__img {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+}
+.signup {
+  background-image: url(../img/luis-vidal-qivXmsOmEno-unsplash.png);
+  background-color: var(--Grey);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: var(--OffWhite);
+  min-height: 80vh;
+}
+.signup h2 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+.landing__text {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+.landing__text_extra p {
+  font-size: 20px;
+}
+.signup input {
+  margin-top: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.invalid-feedback {
+  color: var(--White) !important;
+}
+.btn_signup {
+  white-space: nowrap;
+  top: 20px;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border: 3px solid var(--Black);
+  border-radius: 50px;
+  background-color: var(--Grey);
+  color: var(--White);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.signup button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.footer {
+  background: var(--Dark);
+  color: var(--OffWhite);
+  text-align: center;
+  padding: 30px;
+}
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+.footer__link {
+  justify-content: center;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+}
+.footer__link:hover,
+.social-list__link:hover {
+  opacity: 0.7;
+}
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+.social-list__item {
+  margin: 0 0.5em;
+}
+.social-list__link {
+  padding: 0.5em;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .button-container button {
+    font-size: 0.75rem;
+    padding: 5px 5px;
+  }
+}
+@media (max-width: 429px) {
+  .card h2 {
+    font-size: 30px;
+    height: 140px;
+  }
+  .card p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 320px) {
+  .card h2 {
+    margin-bottom: 2px;
+    margin-top: 2px;
+    font-size: 25px;
+    height: 140px;
+  }
+}
+@media (max-width: 767px) {
+  .image-container {
+    flex: 0 0 100%;
+    min-height: 300px;
+  }
+  .sct-focusontheworkout {
+    flex-direction: column;
+  }
+  .sct-focusontheworkout h1,
+  .sct-focusontheworkout p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .image-container-2 {
+    flex: 0 0 100%;
+  }
+  .sct-pacerfeature {
+    flex-direction: column;
+  }
+  .sct-pacerfeature h1,
+  .sct-pacerfeature h4,
+  .sct-pacerfeature p {
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-image {
+    width: 150px;
+    height: 150px;
+  }
+  .content-container-2,
+  .content-container-2 h1,
+  .content-container-2 p {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    margin: 1rem;
+  }
+}
+@media (min-width: 800px) {
+  .teammembers {
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .teammember {
+    width: calc(30%);
+  }
+  .teammember + .teammember {
+    margin-left: 2em;
+  }
+}
+@media (max-width: 460px) {
+  .signup h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
